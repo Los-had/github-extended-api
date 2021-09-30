@@ -12,6 +12,7 @@ or in [https://github-extended-api.herokuapp.com/redoc](https://github-extended-
 * get user repo by name
 * get all user info 
 * get user info with filter
+* uses pytest to perform tests
 
 ## installing on your machine
 
