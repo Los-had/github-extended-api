@@ -1,30 +1,31 @@
 import requests
 from requests import HTTPError, ConnectionError
 import json
+from typing import Optional
 
-def http_error(error):
+def http_error(error: str) -> dict:
     return {
         "Message": f"A http_error(error: {error}) ocurred, try again."
     }
 
-def connection_error(error):
+def connection_error(error: str) -> dict:
     return {
         "Message": f"A connection_error(error: {error}) ocurred, try again."
     }
 
-def default_error():
+def default_error() -> dict:
     return {
         "Message": "An error ocurred, try again."
     }
 
-def dynamic_error(error):
+def dynamic_error(error: str) -> dict:
     return {
         "Message": "An error ocurred, try again.",
         "Error": error
     }
 
 
-def get_all_info(username: str, filter=None):
+def get_all_info(username: str, filter: Optional[str] = None) -> dict:
     if filter:
         activate_filter = True
     else:
@@ -75,7 +76,7 @@ def get_all_info(username: str, filter=None):
         api_response = {
             'bio': bio, 
             'name': name, 
-            'username': user, 
+            'username': user,
             'followers': followers, 
             'following': following, 
             'website': site, 
@@ -98,7 +99,7 @@ def get_all_info(username: str, filter=None):
     except:
         return default_error()
 
-def get_repo(repo: str, username :str):
+def get_repo(repo: str, username :str) -> dict:
     if username == '':
         return dynamic_error('No username specified')
     
@@ -123,6 +124,9 @@ def get_repo(repo: str, username :str):
                 else:
                     license = None
                 
+                if 'language' in repo_s:
+                    language = repo_s['language']
+                
                 name = repo_s['name']
                 full_name = repo_s['full_name']
                 is_a_fork = repo_s['fork']
@@ -141,6 +145,7 @@ def get_repo(repo: str, username :str):
                     'description': description,
                     'owner': owner,
                     'license': license,
+                    'language': language,
                     'repo_url': repo_url,
                     'stars': stars,
                     'number_of_forks': number_of_forks,
@@ -165,7 +170,7 @@ def get_repo(repo: str, username :str):
     except:
         return default_error()
 
-def get_all_repos(username: str):
+def get_all_repos(username: str) -> dict:
     if username == '':
         return dynamic_error('No username specified')
     
@@ -189,6 +194,9 @@ def get_all_repos(username: str):
             else:
                 license = None
             
+            if 'language' in repo:
+                language = repo['language']
+            
             name = repo['name']
             full_name = repo['full_name']
             is_a_fork = repo['fork']
@@ -207,6 +215,7 @@ def get_all_repos(username: str):
                 'description': description,
                 'owner': owner,
                 'license': license,
+                'language': language,
                 'repo_url': repo_url,
                 'stars': stars,
                 'number_of_forks': number_of_forks,
@@ -234,8 +243,11 @@ def get_all_repos(username: str):
         return default_error()
 
 if __name__ == '__main__':
+    '''
     print(get_all_repos('lind0-oss'))
     print('\n\n\n\n')
     print(get_all_info('lind0-oss'))
     print(get_all_repos('AIBUSHISHOU'))
     print(get_repo('Los-had', 'Los-had'))
+    '''
+    print(get_repo('whatsapp-automation', 'Los-had'))

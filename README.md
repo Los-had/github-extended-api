@@ -3,7 +3,8 @@ more functions for the github api.
 
 ### documentation
 read the documentation in:
-[https://github-extended-api/docs](https://github-extended-api/docs)
+[https://github-extended-api.herokuapp.com/docs](https://github-extended-api.herokuapp.com/docs)
+or in [https://github-extended-api.herokuapp.com/redoc](https://github-extended-api.herokuapp.com/redoc)
 
 ## features
 * get user pinned repos

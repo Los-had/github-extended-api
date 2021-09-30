@@ -117,5 +117,6 @@ dmypy.json
 users.db
 password.txt
 talk.db
+.vscode
 # pycache
 server/__pycache__
