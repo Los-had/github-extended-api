@@ -20,6 +20,6 @@ async def get_all_repositories(*, username: str):
 async def get_repository(*, repo: str, username: str):
     return get_repo(repo, username)
 
-@app.get('api/v1/get-pinned-repos')
+@app.get('/api/v1/get-pinned-repos')
 async def get_pinned_repositories(*, username: str):
     return get_pinned_repos(username)

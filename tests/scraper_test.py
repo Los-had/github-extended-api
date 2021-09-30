@@ -1,1 +1,0 @@
-from server.scraper import get_pinned_repos

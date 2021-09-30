@@ -87,5 +87,5 @@ def get_pinned_repos(username: str) -> dict:
 
 if __name__ == '__main__':
     #print(get_pinned_repos('AIBUSHISHOU'))
-    print(get_pinned_repos('lind0-oss'))
-    #print(get_pinned_repos('Los-had'))
+    #print(get_pinned_repos('lind0-oss'))
+    print(get_pinned_repos('Los-had'))
