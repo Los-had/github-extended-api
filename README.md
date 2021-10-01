@@ -1,6 +1,7 @@
 # github-extended-api 
-more functions for the github api.
+***WARNING: THE API IS NOT WORKING AT THE MOMENT***
 
+more functions for the github api.
 ### documentation
 read the documentation in:
 [https://github-extended-api.herokuapp.com/docs](https://github-extended-api.herokuapp.com/docs)
