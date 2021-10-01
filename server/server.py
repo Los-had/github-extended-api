@@ -2,7 +2,27 @@ import requests
 from requests import HTTPError, ConnectionError
 import json
 from typing import Optional
-from error.errors import dynamic_error, default_error, connection_error, http_error
+
+def http_error(error: str) -> dict:
+    return {
+        "Message": f"A http_error(error: {error}) ocurred, try again."
+    }
+
+def connection_error(error: Optional[str] = None) -> dict:
+    return {
+        "Message": f"A connection_error(error: {error}) ocurred, try again."
+    }
+
+def default_error() -> dict:
+    return {
+        "Message": "An error ocurred, try again."
+    }
+
+def dynamic_error(error: str) -> dict:
+    return {
+        "Message": "An error ocurred, try again.",
+        "Error": error
+    }
 
 def get_all_info(username: str, filter: Optional[str] = None) -> dict:
     if filter:

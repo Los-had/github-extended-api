@@ -2,7 +2,27 @@ from bs4 import BeautifulSoup
 import requests
 from requests import HTTPError, ConnectionError
 from typing import Optional
-from error.errors import dynamic_error, default_error, connection_error, http_error
+
+def http_error(error: str) -> dict:
+    return {
+        "Message": f"A http_error(error: {error}) ocurred, try again."
+    }
+
+def connection_error(error: Optional[str] = None) -> dict:
+    return {
+        "Message": f"A connection_error(error: {error}) ocurred, try again."
+    }
+
+def default_error() -> dict:
+    return {
+        "Message": "An error ocurred, try again."
+    }
+
+def dynamic_error(error: str) -> dict:
+    return {
+        "Message": "An error ocurred, try again.",
+        "Error": error
+    }
 
 def get_pinned_repos(username: str) -> dict:
     if username == '':
