@@ -2,7 +2,7 @@ import requests
 from requests import HTTPError, ConnectionError
 import json
 from typing import Optional
-from error_module.errors import dynamic_error, default_error, connection_error, http_error
+from error.errors import dynamic_error, default_error, connection_error, http_error
 
 def get_all_info(username: str, filter: Optional[str] = None) -> dict:
     if filter:

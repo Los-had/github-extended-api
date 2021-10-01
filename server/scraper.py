@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from requests import HTTPError, ConnectionError
 from typing import Optional
-from error_module.errors import dynamic_error, default_error, connection_error, http_error
+from error.errors import dynamic_error, default_error, connection_error, http_error
 
 def get_pinned_repos(username: str) -> dict:
     if username == '':
