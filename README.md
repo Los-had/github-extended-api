@@ -1,5 +1,4 @@
 # github-extended-api 
-***WARNING: THE API IS NOT WORKING AT THE MOMENT***
 
 more functions for the github api.
 ### documentation
