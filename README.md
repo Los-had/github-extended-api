@@ -29,7 +29,7 @@ $ cd github-extended-api
     # enter in the app folder
 $ pip install -r requirements.txt
     # install the dependencies
-$ uvicorn app:app
+$ uvicorn app:app --reload
     # execute the app
 ```
 
