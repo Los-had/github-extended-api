@@ -33,7 +33,7 @@ $ uvicorn app:app --reload
     # execute the app
 ```
 
-This commands wiil execute the script in: 
+This commands will execute the script in: 
 
 ```
 http://127.0.0.1:8000
