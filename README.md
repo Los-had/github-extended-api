@@ -41,6 +41,8 @@ http://127.0.0.1:8000
 
 to stop the server(localhost) press <kbd>Ctrl</kbd><kbd>+</kbd><kbd>C</kbd> or <kbd>Cmd</kbd><kbd>+</kbd><kbd>C</kbd>
 
+## Contributing
+Feel free to fork and make a pull request
 
 ## License
 [MIT](LICENSE)
